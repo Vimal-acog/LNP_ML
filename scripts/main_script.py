@@ -381,7 +381,7 @@ def specified_cv_split(split_spec_fname, path_to_folders = '../data', is_morgan 
 	# cv_fold: self-explanatory
 	# ultra_held_out_fraction: if you want to hold a dataset out from even the cross-validation datasets this is the way to do it
 	# test_is_valid: if true, then does the split where the test set is just the validation set, so that maximum data can be reserved for training set (this is for doing in siico screening)
-	all_df = pd.read_csv(path_to_folders + '/all_data.csv')
+	all_df = pd.read_csv(path_to_folders + '/all_data.csv', low_memory =False)
 	split_df = pd.read_csv(path_to_folders+'/crossval_split_specs/'+split_spec_fname)
 	split_path = path_to_folders + '/crossval_splits/' + split_spec_fname[:-4]
 	if ultra_held_out_fraction>-0.5:

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "lnp-ml"
+version = "0.1.0"
+description = "This repository contains the data processing code and analysis discussed in the paper \"Artificial intelligence-guided design of lipid nanoparticles for pulmonary gene therapy\"."
+authors = ["Your Name <you@example.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9"
+chemprop = "1.7.0"
+rdkit = { version = "2024.3.2", optional = true }
+torch = { version = "1.13.1", optional = true }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
